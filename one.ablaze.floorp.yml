@@ -48,8 +48,13 @@ modules:
       - cd /app/ && tar Jxvf ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.xz
     sources:
       - type: file
+        only-arches: [x86_64]
         url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-10.14.0.tar.xz'
         sha256: 8cbc3e13beb57a8c7704bd54d84260c58f5c9606d9325be45ead8575dda65ef1
+      - type: file
+        only-arches: [aarch64]
+        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-10.14.0-aarch64.tar.xz'
+        sha256: db11e98b30fea9f540b3bd3e3dde5d082bbe2a70528c2db4dc237199b8ffe007
       - type: file
         path: one.ablaze.floorp.appdata.xml
 
