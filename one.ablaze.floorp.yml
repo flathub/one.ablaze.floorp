@@ -27,6 +27,7 @@ finish-args:
   - --filesystem=xdg-music
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
+  - --filesystem=/run/.heim_org.h5l.kcm-socket
   - --device=all
   - --talk-name=org.freedesktop.FileManager1
   - --system-talk-name=org.freedesktop.NetworkManager
