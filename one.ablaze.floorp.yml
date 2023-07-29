@@ -49,11 +49,11 @@ modules:
     sources:
       - type: file
         only-arches: [x86_64]
-        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-10.16.0-x86_64.tar.xz'
-        sha256: 29ccbfcb785d7244adf4582f31f2c0eb2b01b369e334156c4e7257e391573d57
+        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-11.0.0-x86_64.tar.xz'
+        sha256: 7702a9621e5800cac8ded01705367381f06142253b762fb40a61204ea87fce02
       - type: file
         only-arches: [aarch64]
-        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-10.16.0-aarch64.tar.xz'
-        sha256: b1feba6bf1e38e127ad573a49328e50a430504a9295cf07830615fe05fff52df
+        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-11.0.0-aarch64.tar.xz'
+        sha256: 588059e453f2477f7f54744c52c9bfe877dcdd8fd115398188a255c97605a3fb
       - type: file
         path: one.ablaze.floorp.appdata.xml
