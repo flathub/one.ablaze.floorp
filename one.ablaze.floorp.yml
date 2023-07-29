@@ -57,5 +57,3 @@ modules:
         sha256: db11e98b30fea9f540b3bd3e3dde5d082bbe2a70528c2db4dc237199b8ffe007
       - type: file
         path: one.ablaze.floorp.appdata.xml
-
-
