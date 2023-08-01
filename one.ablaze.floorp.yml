@@ -45,7 +45,7 @@ modules:
     build-commands:
       - install -Dm644 one.ablaze.floorp.appdata.xml -t /app/share/metainfo/
       - mv ${FLATPAK_BUILDER_BUILDDIR}/*.tar.zst ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.zst
-      - cd /app/ && tar Jxvf ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.zst
+      - cd /app/ && tar -xvf ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.zst
     sources:
       - type: file
         only-arches: [x86_64]
