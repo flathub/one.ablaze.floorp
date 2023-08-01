@@ -44,16 +44,16 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm644 one.ablaze.floorp.appdata.xml -t /app/share/metainfo/
-      - mv ${FLATPAK_BUILDER_BUILDDIR}/*.tar.xz ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.xz
-      - cd /app/ && tar Jxvf ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.xz
+      - mv ${FLATPAK_BUILDER_BUILDDIR}/*.tar.zst ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.zst
+      - cd /app/ && tar Jxvf ${FLATPAK_BUILDER_BUILDDIR}/floorp.tar.zst
     sources:
       - type: file
         only-arches: [x86_64]
-        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-11.0.0-x86_64.tar.xz'
+        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-11.0.0-x86_64.tar.zst'
         sha256: 7702a9621e5800cac8ded01705367381f06142253b762fb40a61204ea87fce02
       - type: file
         only-arches: [aarch64]
-        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-11.0.0-aarch64.tar.xz'
+        url: 'https://s3.typeling1578.dev/flatpak-floorp/flatpak-base-11.0.0-aarch64.tar.zst'
         sha256: 588059e453f2477f7f54744c52c9bfe877dcdd8fd115398188a255c97605a3fb
       - type: file
         path: one.ablaze.floorp.appdata.xml
