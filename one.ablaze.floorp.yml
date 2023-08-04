@@ -127,8 +127,6 @@ modules:
 
       - type: file
         path: one.ablaze.floorp.appdata.xml
-      - type: file
-        path: one.ablaze.floorp.desktop
       - type: dir
         path: src
         dest: src
