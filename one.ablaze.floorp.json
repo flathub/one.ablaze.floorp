@@ -1,0 +1,102 @@
+{
+    "app-id": "one.ablaze.floorp",
+    "name": "Floorp",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "22.08",
+    "sdk": "org.freedesktop.Sdk",
+    "separate-locales": false,
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig",
+        "/share/aclocal",
+        "/share/gtk-doc",
+        "/man",
+        "/share/man",
+        "*.la", "*.a"
+    ],
+    "modules": [
+        "shared-modules/dbus-glib/dbus-glib.json",
+        "shared-modules/libcanberra/libcanberra.json",
+        "shared-modules/intltool/intltool-0.51.json",
+        {
+            "name": "kerberos",
+            "subdir": "src",
+            "config-opts": [
+                    "--localstatedir=/var/lib",
+                    "--sbindir=${FLATPAK_DEST}/bin",
+                    "--disable-rpath",
+                    "--disable-static"
+            ],
+            "post-install": [
+                "install -Dm644 ../krb5.conf -t ${FLATPAK_DEST}/etc/"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://kerberos.org/dist/krb5/1.20/krb5-1.20.1.tar.gz",
+                    "sha256": "704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851"
+                },
+                {
+                    "type": "file",
+                    "path": "krb5.conf"
+                }
+            ],
+            "cleanup": [
+                "/bin",
+                "/share/et",
+                "/share/examples"
+            ]
+        },
+        {
+            "name": "libnotify",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dtests=false",
+                "-Dintrospection=disabled",
+                "-Dman=false",
+                "-Dgtk_doc=false",
+                "-Ddocbook_docs=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libnotify/0.8/libnotify-0.8.2.tar.xz",
+                    "sha256": "c5f4ed3d1f86e5b118c76415aacb861873ed3e6f0c6b3181b828cf584fc5c616"
+                }
+            ]
+        },
+        {
+            "name": "sound-theme-freedesktop",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://salsa.debian.org/gnome-team/sound-theme-freedesktop.git",
+                    "tag": "upstream/0.8"
+                }
+            ]
+        },
+        {
+            "name": "pcsc-lite",
+            "config-opts": [
+                "--disable-libudev",
+                "--disable-libsystemd",
+                "--without-systemdsystemunitdir",
+                "--disable-serial",
+                "--disable-usb",
+                "--disable-documentation"
+            ],
+            "post-install": [
+                "rm /app/sbin/pcscd",
+                "rmdir /app/sbin || true"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://salsa.debian.org/rousseau/PCSC/-/archive/1.9.9/PCSC-1.9.9.tar.bz2",
+                    "sha256": "09067c3d807ab11509565899b7a46aec8dffd9e14bee9e6e2cdfddd9f8f49173"
+                }
+            ]
+        }
+    ]
+}
