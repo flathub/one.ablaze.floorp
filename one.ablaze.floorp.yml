@@ -9,7 +9,7 @@ add-extensions:
     version: 22.08
     add-ld-path: "."
 
-command: floorp
+command: floorp-lightning
 
 finish-args:
   - --share=ipc
@@ -108,7 +108,7 @@ modules:
       - mv floorp-*.tar.bz2 floorp.tar.bz2
       - tar -xvf ./floorp.tar.bz2 -C /app/lib
       - cp -r ./src/* /app/
-      - chmod +x /app/bin/floorp
+      - chmod +x /app/bin/floorp-lightning
       - |
         for size in 16 32 48 64 128; do
           mkdir -p "/app/share/icons/hicolor/${size}x${size}/apps"
