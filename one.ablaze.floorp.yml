@@ -1,12 +1,12 @@
 app-id: one.ablaze.floorp
 name: Floorp
 runtime: org.freedesktop.Platform
-runtime-version: 22.08
+runtime-version: 23.08
 sdk: org.freedesktop.Sdk
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
     directory: lib/ffmpeg
-    version: 22.08
+    version: 23.08
     add-ld-path: "."
 
 command: floorp
@@ -55,8 +55,8 @@ modules:
       - install -Dm644 ../krb5.conf -t ${FLATPAK_DEST}/etc/
     sources:
       - type: archive
-        url: 'https://kerberos.org/dist/krb5/1.20/krb5-1.20.1.tar.gz'
-        sha256: 704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851
+        url: 'https://kerberos.org/dist/krb5/1.21/krb5-1.21.tar.gz'
+        sha256: 69f8aaff85484832df67a4bbacd99b9259bd95aab8c651fbbe65cdc9620ea93b
       - type: file
         path: krb5.conf
     cleanup:
@@ -96,8 +96,8 @@ modules:
       - rmdir /app/sbin || true
     sources:
       - type: archive
-        url: 'https://salsa.debian.org/rousseau/PCSC/-/archive/1.9.9/PCSC-1.9.9.tar.bz2'
-        sha256: 09067c3d807ab11509565899b7a46aec8dffd9e14bee9e6e2cdfddd9f8f49173
+        url: 'https://salsa.debian.org/rousseau/PCSC/-/archive/2.0.0/PCSC-2.0.0.tar.bz2'
+        sha256: d85195b9139d120cb6ba20199a19d3ef4aecdb7922eaead62994c704ea3da19e
 
   - name: floorp
     buildsystem: simple
