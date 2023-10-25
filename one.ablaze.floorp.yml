@@ -118,12 +118,12 @@ modules:
     sources:
       - type: file
         only-arches: [x86_64]
-        url: 'https://github.com/Floorp-Projects/Floorp/releases/download/v11.5.0-lightning/floorp-11.5.0.linux-x86_64.tar.bz2'
-        sha256: 5ccbfa926118a0d69e65459dfa0bcaf1993bcf0ee3534dc0c6375f122f738f95
+        url: 'https://github.com/Floorp-Projects/Floorp/releases/download/v11.5.1-lightning/floorp-11.5.1.linux-x86_64.tar.bz2'
+        sha256: 9144c4b941cace814c9540a8a2ce35babd54ec5a1471f2e81ca0c693ba3b48bc
       - type: file
         only-arches: [aarch64]
-        url: 'https://github.com/Floorp-Projects/Floorp/releases/download/v11.5.0-lightning/floorp-11.5.0.linux-aarch64.tar.bz2'
-        sha256: 02138733fdc8f36ec4476ec62467074cfc97885e3b1b24e625c3a7c38662cec7
+        url: 'https://github.com/Floorp-Projects/Floorp/releases/download/v11.5.1-lightning/floorp-11.5.1.linux-aarch64.tar.bz2'
+        sha256: 17a3533dd796aca5f12e93385d5786ecb2d751d8d6e70bda21eb2b2aab8361df
 
       - type: file
         path: one.ablaze.floorp.appdata.xml
