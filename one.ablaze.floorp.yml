@@ -49,8 +49,8 @@ cleanup:
   - /share/info
   - /man
   - /share/man
-  - *.la
-  - *.a
+  - '*.la'
+  - '*.a'
 
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
@@ -114,7 +114,7 @@ modules:
 
   - name: dotconf
     cleanup:
-      - *
+      - '*'
     sources:
       - type: archive
         url: 'https://github.com/williamh/dotconf/archive/refs/tags/v1.3.tar.gz'
