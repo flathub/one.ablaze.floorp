@@ -143,6 +143,7 @@ modules:
       - /bin
       - /etc
       - /libexec
+      - /lib/speech-dispatcher
       - /share/sounds/speech-dispatcher
       - /share/speech-dispatcher
 
