@@ -127,7 +127,7 @@ modules:
   - name: libspeechd
     config-opts:
       - --disable-python
-      - --with-systemdsystemunitdir=''
+      - --with-systemdsystemunitdir=\"\"
       - --disable-rpath
       - --disable-static
       - --with-kali=no
