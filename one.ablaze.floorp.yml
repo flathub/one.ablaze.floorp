@@ -113,8 +113,6 @@ modules:
         sha256: d85195b9139d120cb6ba20199a19d3ef4aecdb7922eaead62994c704ea3da19e
 
   - name: dotconf
-    cleanup:
-      - '*'
     sources:
       - type: archive
         url: 'https://github.com/williamh/dotconf/archive/refs/tags/v1.3.tar.gz'
@@ -124,28 +122,30 @@ modules:
           - autoreconf -fiv
         dest-filename: autogen.sh
 
+  - name: espeak-ng
+    cleanup:
+      - '*.la'
+    no-parallel-make: true
+    sources:
+      - type: git
+        url: https://github.com/espeak-ng/espeak-ng.git
+        tag: 1.49.2
+        commit: 3ed34d3a74eb69cedcdfa98dbedef4359279d352
+    post-install:
+      - ln -s /app/lib/libespeak-ng.so /app/lib/libespeak.so
+      - ln -s /app/lib/libespeak-ng.a /app/lib/libespeak.a
+
   - name: libspeechd
     config-opts:
       - --disable-python
-      - --with-systemdsystemunitdir=\"\"
+      - --with-systemdsystemunitdir=''
       - --disable-rpath
       - --disable-static
-      - --with-kali=no
-      - --with-baratinoo=no
-      - --with-ibmtts=no
-      - --with-voxin=no
-      - --without-oss
+      - --with-espeak-ng
     sources:
       - type: archive
         url: 'https://github.com/brailcom/speechd/releases/download/0.11.5/speech-dispatcher-0.11.5.tar.gz'
         sha256: 1ce4759ffabbaf1aeb433a5ec0739be0676e9bdfbae9444a7b3be1b2af3ec12b
-    cleanup:
-      - /bin
-      - /etc
-      - /libexec
-      - /lib/speech-dispatcher
-      - /share/sounds/speech-dispatcher
-      - /share/speech-dispatcher
 
   - name: floorp
     buildsystem: simple
