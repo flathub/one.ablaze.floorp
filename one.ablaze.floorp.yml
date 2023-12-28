@@ -129,8 +129,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/espeak-ng/espeak-ng.git
-        tag: 1.49.2
-        commit: 3ed34d3a74eb69cedcdfa98dbedef4359279d352
+        tag: 1.51
     post-install:
       - ln -s /app/lib/libespeak-ng.so /app/lib/libespeak.so
       - ln -s /app/lib/libespeak-ng.a /app/lib/libespeak.a
