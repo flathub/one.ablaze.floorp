@@ -39,6 +39,19 @@ finish-args:
   - --own-name=org.mpris.MediaPlayer2.firefox.*
   - --own-name=org.mozilla.floorp.*
 
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/pkgconfig
+  - /share/aclocal
+  - /share/gtk-doc
+  - /share/doc
+  - /share/info
+  - /man
+  - /share/man
+  - '*.la'
+  - '*.a'
+
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
   - shared-modules/libcanberra/libcanberra.json
