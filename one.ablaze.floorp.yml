@@ -21,9 +21,9 @@ finish-args:
   - --socket=pcsc
   - --socket=cups
   - --persist=.floorp
-  - --filesystem=xdg-download
-  - --filesystem=xdg-documents
   - --filesystem=xdg-desktop
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
   - --filesystem=xdg-music
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
