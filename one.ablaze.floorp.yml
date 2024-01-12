@@ -163,6 +163,12 @@ modules:
           mkdir -p "/app/share/icons/hicolor/${size}x${size}/apps"
           cp "/app/lib/floorp/browser/chrome/icons/default/default${size}.png" "/app/share/icons/hicolor/${size}x${size}/apps/one.ablaze.floorp.png"
         done
+      - |
+        export DISTRIBUTION_VERSION=$(cat one.ablaze.floorp.appdata.xml | sed -r 's/\s*?<release\sversion="([0-9\.]*?)"\sdate="([0-9\-]*?)".*?\/>\s*?/\1_\2/gp;d' | head -1)
+        if [[ $DISTRIBUTION_VERSION = "" ]]; then
+          exit 1
+        fi
+        echo "pref(\"distribution.version\", \"$DISTRIBUTION_VERSION\")" >> /app/lib/floorp/defaults/pref/flatpak-prefs.js
 
     sources:
       - type: file
