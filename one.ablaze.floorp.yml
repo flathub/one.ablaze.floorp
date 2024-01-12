@@ -168,7 +168,7 @@ modules:
         if [[ $DISTRIBUTION_VERSION = "" ]]; then
           exit 1
         fi
-        echo "pref(\"distribution.version\", \"$DISTRIBUTION_VERSION\")" >> /app/lib/floorp/defaults/pref/flatpak-prefs.js
+        echo "pref(\"distribution.version\", \"$DISTRIBUTION_VERSION\");" >> /app/lib/floorp/defaults/pref/flatpak-prefs.js
 
     sources:
       - type: file
