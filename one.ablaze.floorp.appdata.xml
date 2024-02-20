@@ -28,6 +28,12 @@
     <category>Network</category>
     <category>WebBrowser</category>
   </categories>
+  <keywords>
+    <keyword>ablaze</keyword>
+    <keyword>web</keyword>
+    <keyword>browser</keyword>
+    <keyword>internet</keyword>
+  </keywords>
   <url type="donation">https://github.com/sponsors/Ablaze-MIRAI</url>
   <url type="homepage">https://floorp.app/</url>
   <screenshots>
