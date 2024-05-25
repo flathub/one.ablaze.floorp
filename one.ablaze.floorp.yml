@@ -164,13 +164,13 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.13.2/floorp-11.13.2.linux-x86_64.tar.bz2
-        sha256: 7266a289418d9b171d0c267dace7ac353e0ad5c63f942f50101fa557a9af4add
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.13.3/floorp-11.13.3.linux-x86_64.tar.bz2
+        sha256: 24204a472b7f668b71baeb21948d037d34b56bc25b5c2380e36f5046bc2be81b
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.13.2/floorp-11.13.2.linux-aarch64.tar.bz2
-        sha256: 4b736e50ef79e0ebcbb85bf4dab15e3b1f3933b44b359585f5d7c268e17a0c48
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.13.3/floorp-11.13.3.linux-aarch64.tar.bz2
+        sha256: aeffc912a8180cc29bba32f90e7fa339cd569021dc29cf0e636352bc1454f1eb
       - type: file
         path: one.ablaze.floorp.appdata.xml
       - type: dir
