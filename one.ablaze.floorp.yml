@@ -49,8 +49,8 @@ cleanup:
   - /share/info
   - /man
   - /share/man
-  - "*.la"
-  - "*.a"
+  - '*.la'
+  - '*.a'
 modules:
   - shared-modules/dbus-glib/dbus-glib.json
   - shared-modules/libcanberra/libcanberra.json
@@ -109,7 +109,7 @@ modules:
         sha256: 35ce63ff9f8fa34b67fbc791be08b3daba621263545e3d0fe1e480301f10a41d
   - name: dotconf
     cleanup:
-      - "*"
+      - '*'
     sources:
       - type: archive
         url: https://github.com/williamh/dotconf/archive/refs/tags/v1.3.tar.gz
@@ -155,17 +155,19 @@ modules:
           cp "/app/lib/floorp/browser/chrome/icons/default/default${size}.png" "/app/share/icons/hicolor/${size}x${size}/apps/one.ablaze.floorp.png"
         done
       - >
-        export DISTRIBUTION_VERSION=$(cat one.ablaze.floorp.appdata.xml | sed -r 's/\s*?<release\sversion="([0-9\.]*?)"\sdate="([0-9\-]*?)".*?>.*?<\/release>\s*?/\1_\2/gp;d' | head -1)
+        export DISTRIBUTION_VERSION=$(cat one.ablaze.floorp.appdata.xml | sed -r 's/\s*?<release\sversion="([0-9\.]*?)"\sdate="([0-9\-]*?)".*?>.*?<\/release>\s*?/\1_\2/gp;d'
+        | head -1)
 
-        echo $DISTRIBUTION_VERSION | grep -E "^[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?_[0-9]{4}-[0-9]{2}-[0-9]{2}$" # validation
+        echo $DISTRIBUTION_VERSION | grep -E "^[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+)?_[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        # validation
 
         echo "pref(\"distribution.version\", \"$DISTRIBUTION_VERSION\");" >> /app/lib/floorp/defaults/pref/flatpak-prefs.js
     sources:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.15.0/floorp-11.15.0.linux-x86_64.tar.bz2
-        sha256: c696b78d1d67583149addb84777840621f55133cf4a05eda57f38bf4bfe30d73
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-11.16.0.linux-x86_64.tar.bz2
+        sha256: 7f0577224342809ba16b683491acd3b1a246ccf9b99c8779e1b2e728d9bc1fb1
         x-checker-data:
           is-main-source: true
           type: json
@@ -173,12 +175,11 @@ modules:
           version-query: .tag_name | sub("^v"; "")
           url-query: '"https://github.com/Floorp-Projects/Floorp/releases/download/v"
             + $version + "/floorp-" + $version + ".linux-x86_64.tar.bz2"'
-            
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.15.0/floorp-11.15.0.linux-aarch64.tar.bz2
-        sha256: 18c3b00da76109bccdbfd0c54b7dbe8b4e8a00f6bbd85c7ae739a81c2be33fc6
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.16.0/floorp-11.16.0.linux-aarch64.tar.bz2
+        sha256: 451836ccd4a7fc75f376ffa6a32dc6997d3ec1aafc63cf7cc0d9f1840b46f640
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Floorp-Projects/Floorp/releases/latest
