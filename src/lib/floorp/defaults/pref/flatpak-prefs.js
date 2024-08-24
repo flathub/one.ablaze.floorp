@@ -5,3 +5,5 @@ pref("enable.floorp.update", false);
 pref("enable.floorp.updater.latest", false);
 
 pref("accessibility.typeaheadfind.soundURL", "default");
+
+pref("security.sandbox.warn_unprivileged_namespaces", false);
