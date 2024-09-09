@@ -18,6 +18,7 @@ finish-args:
   - --socket=pcsc
   - --socket=cups
   - --persist=.floorp
+  - --env=DICPATH=/usr/share/hunspell
   - --filesystem=home/.local/share/applications:create
   - --filesystem=home/.local/share/icons:create
   - --filesystem=xdg-desktop
