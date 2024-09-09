@@ -1,7 +1,7 @@
 app-id: one.ablaze.floorp
 name: Floorp
 runtime: org.freedesktop.Platform
-runtime-version: 23.08
+runtime-version: 24.08
 sdk: org.freedesktop.Sdk
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
