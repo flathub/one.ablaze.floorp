@@ -56,11 +56,14 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="11.18.1.1" date="2024-09-08">
+    <release version="11.19.0" date="2024-09-29">
       <description></description>
     </release>
+    <release version="11.18.1.1" date="2024-09-08">
+      <description/>
+    </release>
     <release version="11.18.1" date="2024-09-08">
-      <description />
+      <description/>
     </release>
     <release version="11.18.0" date="2024-09-02">
       <description/>
