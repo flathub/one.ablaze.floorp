@@ -58,118 +58,181 @@
   <releases>
     <release version="11.22.0" date="2025-01-08">
       <description></description>
+      <url>https://blog.ablaze.one/4659/2025-01-20/</url>
     </release>
     <release version="11.21.0" date="2024-11-24">
       <description/>
+      <url>https://blog.ablaze.one/4644/2024-11-18/</url>
     </release>
     <release version="11.20.0" date="2024-10-29">
       <description/>
+      <url>https://blog.ablaze.one/4556/2024-10-09/</url>
     </release>
-    <release version="11.19.1" date="2024-10-10">
-      <description/>
-    </release>
+    <release version="11.19.1" date="2024-10-10"/>
     <release version="11.19.0" date="2024-09-29">
       <description/>
+      <url>https://blog.ablaze.one/4541/2024-09-21/</url>
     </release>
-    <release version="11.18.1.1" date="2024-09-08">
-      <description/>
-    </release>
-    <release version="11.18.1" date="2024-09-08">
-      <description/>
-    </release>
+    <release version="11.18.1.1" date="2024-09-08"/>
+    <release version="11.18.1" date="2024-09-08"/>
     <release version="11.18.0" date="2024-09-02">
       <description/>
+      <url>https://blog.ablaze.one/4502/2024-09-00/</url>
     </release>
-    <release version="11.17.8" date="2024-08-27">
-      <description/>
-    </release>
-    <release version="11.17.7" date="2024-08-24">
-      <description/>
-    </release>
-    <release version="11.17.6.1" date="2024-08-22">
-      <description/>
-    </release>
-    <release version="11.17.6" date="2024-08-22">
-      <description/>
-    </release>
-    <release version="11.17.5" date="2024-08-20">
-      <description/>
-    </release>
-    <release version="11.17.4" date="2024-08-18">
-      <description/>
-    </release>
-    <release version="11.17.3" date="2024-08-17">
-      <description/>
-    </release>
-    <release version="11.17.1.1" date="2024-08-17">
-      <description/>
-    </release>
+    <release version="11.17.8" date="2024-08-27"/>
+    <release version="11.17.7" date="2024-08-24"/>
+    <release version="11.17.6.1" date="2024-08-22"/>
+    <release version="11.17.6" date="2024-08-22"/>
+    <release version="11.17.5" date="2024-08-20"/>
+    <release version="11.17.4" date="2024-08-18"/>
+    <release version="11.17.3" date="2024-08-17"/>
+    <release version="11.17.1.1" date="2024-08-17"/>
     <release version="11.17.1" date="2024-08-16">
-      <description/>
+      <url>https://blog.ablaze.one/4464/2024-08-01/</url>
     </release>
-    <release version="11.16.0" date="2024-08-08"/>
-    <release version="11.15.0" date="2024-07-10"/>
+    <release version="11.16.0" date="2024-08-08">
+      <url>https://blog.ablaze.one/4415/2024-08-00/</url>
+    </release>
+    <release version="11.15.0" date="2024-07-10">
+      <url>https://blog.ablaze.one/4397/2024-07-21/</url>
+    </release>
     <release version="11.14.1" date="2024-06-13"/>
-    <release version="11.14.0" date="2024-06-11"/>
+    <release version="11.14.0" date="2024-06-11">
+      <url>https://blog.ablaze.one/4375/2024-06-00/</url>
+    </release>
     <release version="11.13.3" date="2024-05-25"/>
     <release version="11.13.2" date="2024-05-19"/>
     <release version="11.13.1" date="2024-05-18"/>
-    <release version="11.13.0" date="2024-05-17"/>
+    <release version="11.13.0" date="2024-05-17">
+      <url>https://blog.ablaze.one/4314/2024-05-16/</url>
+    </release>
     <release version="11.12.2" date="2024-04-21"/>
     <release version="11.12.1" date="2024-04-20"/>
-    <release version="11.12.0" date="2024-04-14"/>
+    <release version="11.12.0" date="2024-04-14">
+      <url>https://blog.ablaze.one/4195/2024-04-12/</url>
+    </release>
     <release version="11.11.2.1" date="2024-04-13"/>
     <release version="11.11.2" date="2024-03-25"/>
     <release version="11.11.1.1" date="2024-03-24"/>
     <release version="11.11.1" date="2024-03-21"/>
-    <release version="11.11.0" date="2024-03-19"/>
+    <release version="11.11.0" date="2024-03-19">
+      <url>https://blog.ablaze.one/4115/2024-03-21/</url>
+    </release>
     <release version="11.10.5" date="2024-02-26"/>
     <release version="11.10.4" date="2024-02-25"/>
-    <release version="11.10.3" date="2024-02-25"/>
+    <release version="11.10.3" date="2024-02-25">
+      <url>https://blog.ablaze.one/4014/2024-02-10/</url>
+    </release>
     <release version="11.10.2.3" date="2024-02-21"/>
     <release version="11.10.2.2" date="2024-02-20"/>
     <release version="11.10.2.1" date="2024-02-20"/>
     <release version="11.10.2" date="2024-02-19"/>
-    <release version="11.10.0" date="2024-02-18"/>
+    <release version="11.10.0" date="2024-02-18">
+      <url>https://blog.ablaze.one/3992/2024-02-22/</url>
+    </release>
     <release version="11.9.0.1" date="2024-02-03"/>
-    <release version="11.9.0" date="2024-02-02"/>
-    <release version="11.8.2" date="2024-01-22"/>
+    <release version="11.9.0" date="2024-02-02">
+      <url>https://blog.ablaze.one/3926/2024-02-21/</url>
+    </release>
+    <release version="11.8.2" date="2024-01-22">
+      <url>https://blog.ablaze.one/3910/2024-01-10/</url>
+    </release>
     <release version="11.8.1" date="2024-01-18"/>
-    <release version="11.8.0" date="2024-01-16"/>
+    <release version="11.8.0" date="2024-01-16">
+      <url>https://blog.ablaze.one/3865/2024-01-17/</url>
+    </release>
     <release version="11.7.1" date="2023-12-20"/>
-    <release version="11.7.0" date="2023-12-19"/>
+    <release version="11.7.0" date="2023-12-19">
+      <url>https://blog.ablaze.one/3746/2023-12-00/</url>
+    </release>
     <release version="11.6.1.1" date="2023-11-21"/>
-    <release version="11.6.1" date="2023-11-21"/>
-    <release version="11.6.0" date="2023-11-20"/>
-    <release version="11.5.1" date="2023-10-28"/>
-    <release version="11.5.0" date="2023-10-22"/>
-    <release version="11.4.1" date="2023-09-29"/>
-    <release version="11.4.0" date="2023-09-23"/>
-    <release version="11.3.3" date="2023-09-14"/>
-    <release version="11.1.2" date="2023-08-14"/>
-    <release version="11.1.1" date="2023-08-14"/>
-    <release version="11.1.0" date="2023-08-04"/>
+    <release version="11.6.1" date="2023-11-21">
+      <url>https://blog.ablaze.one/3646/2023-11-23/</url>
+    </release>
+    <release version="11.6.0" date="2023-11-20">
+      <url>https://blog.ablaze.one/3633/2023-11-18/</url>
+    </release>
+    <release version="11.5.1" date="2023-10-28">
+      <url>https://blog.ablaze.one/3623/2023-10-12/</url>
+    </release>
+    <release version="11.5.0" date="2023-10-22">
+      <url>https://blog.ablaze.one/3596/2023-10-15/</url>
+    </release>
+    <release version="11.4.1" date="2023-09-29">
+      <url>https://blog.ablaze.one/3563/2023-09-23/</url>
+    </release>
+    <release version="11.4.0" date="2023-09-23">
+      <url>https://blog.ablaze.one/3520/2023-09-23/</url>
+    </release>
+    <release version="11.3.3" date="2023-09-14">
+      <url>https://blog.ablaze.one/3493/2023-09-12/</url>
+    </release>
+    <release version="11.1.2" date="2023-08-14">
+      <url>https://blog.ablaze.one/3427/2023-08-15/</url>
+    </release>
+    <release version="11.1.1" date="2023-08-14">
+      <url>https://blog.ablaze.one/3410/2023-08-00/</url>
+    </release>
+    <release version="11.1.0" date="2023-08-04">
+      <url>https://blog.ablaze.one/3377/2023-08-18/</url>
+    </release>
     <release version="11.0.0" date="2023-07-29"/>
     <release version="10.16.0.2" date="2023-07-28"/>
     <release version="10.16.0.1" date="2023-07-28"/>
-    <release version="10.16.0" date="2023-07-28"/>
-    <release version="10.15.0" date="2023-07-01"/>
-    <release version="10.14.0" date="2023-06-12"/>
-    <release version="10.13.0" date="2023-05-09"/>
-    <release version="10.12.0" date="2023-04-10"/>
-    <release version="10.11.1" date="2023-03-25"/>
-    <release version="10.9.0" date="2023-01-17"/>
-    <release version="10.8.0" date="2022-12-18"/>
-    <release version="10.7.0" date="2022-11-13"/>
-    <release version="10.6.0" date="2022-10-01"/>
-    <release version="10.5.0" date="2022-09-17"/>
-    <release version="10.4.0" date="2022-08-16"/>
-    <release version="10.2.0" date="2022-07-26"/>
+    <release version="10.16.0" date="2023-07-28">
+      <url>https://blog.ablaze.one/3367/2023-07-00/</url>
+    </release>
+    <release version="10.15.0" date="2023-07-01">
+      <url>https://blog.ablaze.one/3324/2023-07-19/</url>
+    </release>
+    <release version="10.14.0" date="2023-06-12">
+      <url>https://blog.ablaze.one/3217/2023-05-23/</url>
+    </release>
+    <release version="10.13.0" date="2023-05-09">
+      <url>https://blog.ablaze.one/3175/2023-05-23/</url>
+    </release>
+    <release version="10.12.0" date="2023-04-10">
+      <url>https://blog.ablaze.one/3132/2023-04-23/</url>
+    </release>
+    <release version="10.11.1" date="2023-03-25">
+      <url>https://blog.ablaze.one/3105/2023-03-21/</url>
+    </release>
+    <release version="10.9.0" date="2023-01-17">
+      <url>https://blog.ablaze.one/2929/2023-01-14/</url>
+    </release>
+    <release version="10.8.0" date="2022-12-18">
+      <url>https://blog.ablaze.one/2822/2022-11-18/</url>
+    </release>
+    <release version="10.7.0" date="2022-11-13">
+      <url>https://blog.ablaze.one/2732/2022-11-22/</url>
+    </release>
+    <release version="10.6.0" date="2022-10-01">
+      <url>https://blog.ablaze.one/2547/2022-10-23/</url>
+    </release>
+    <release version="10.5.0" date="2022-09-17">
+      <url>https://blog.ablaze.one/2414/2022-09-22/</url>
+    </release>
+    <release version="10.4.0" date="2022-08-16">
+      <url>https://blog.ablaze.one/2182/2022-08-01/</url>
+    </release>
+    <release version="10.2.0" date="2022-07-26">
+      <url>https://blog.ablaze.one/2140/2022-08-12/</url>
+    </release>
     <release version="10.1.0" date="2022-06-29"/>
-    <release version="10.0.4" date="2022-06-28"/>
-    <release version="10.0.0" date="2022-06-19"/>
-    <release version="8.9.9" date="2022-05-29"/>
-    <release version="8.7.3" date="2022-05-22"/>
-    <release version="8.7.2" date="2022-04-30"/>
+    <release version="10.0.4" date="2022-06-28">
+      <url>https://blog.ablaze.one/1994/2022-06-13/</url>
+    </release>
+    <release version="10.0.0" date="2022-06-19">
+      <url>https://blog.ablaze.one/1950/2022-06-14/</url>
+    </release>
+    <release version="8.9.9" date="2022-05-29">
+      <url>https://blog.ablaze.one/1891/2022-05-00/</url>
+    </release>
+    <release version="8.7.3" date="2022-05-22">
+      <url>https://blog.ablaze.one/1883/2022-05-23/</url>
+    </release>
+    <release version="8.7.2" date="2022-04-30">
+      <url>https://blog.ablaze.one/1757/2022-04-18/</url>
+    </release>
   </releases>
 </component>
