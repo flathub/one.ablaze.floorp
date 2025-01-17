@@ -57,26 +57,21 @@
   <content_rating type="oars-1.1"/>
   <releases>
     <release version="11.22.0" date="2025-01-08">
-      <description></description>
       <url>https://blog.ablaze.one/4659/2025-01-20/</url>
     </release>
     <release version="11.21.0" date="2024-11-24">
-      <description/>
       <url>https://blog.ablaze.one/4644/2024-11-18/</url>
     </release>
     <release version="11.20.0" date="2024-10-29">
-      <description/>
       <url>https://blog.ablaze.one/4556/2024-10-09/</url>
     </release>
     <release version="11.19.1" date="2024-10-10"/>
     <release version="11.19.0" date="2024-09-29">
-      <description/>
       <url>https://blog.ablaze.one/4541/2024-09-21/</url>
     </release>
     <release version="11.18.1.1" date="2024-09-08"/>
     <release version="11.18.1" date="2024-09-08"/>
     <release version="11.18.0" date="2024-09-02">
-      <description/>
       <url>https://blog.ablaze.one/4502/2024-09-00/</url>
     </release>
     <release version="11.17.8" date="2024-08-27"/>
