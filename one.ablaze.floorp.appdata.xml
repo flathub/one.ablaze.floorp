@@ -56,8 +56,8 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="11.24.0" date="2025-03-05">
-      <description></description>
+    <release version="11.24.0" date="2025-03-05" urgency="high">
+      <url>https://blog.ablaze.one/4706/2025-03-21/</url>
     </release>
     <release version="11.23.1" date="2025-02-18">
       <url>https://blog.ablaze.one/4678/2025-02-11/</url>
