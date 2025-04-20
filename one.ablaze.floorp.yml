@@ -3,6 +3,7 @@ name: Floorp
 runtime: org.freedesktop.Platform
 runtime-version: 24.08
 sdk: org.freedesktop.Sdk
+base: org.mozilla.firefox.BaseApp
 add-extensions:
   org.freedesktop.Platform.ffmpeg-full:
     directory: lib/ffmpeg
@@ -17,6 +18,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=pcsc
   - --socket=cups
+  - --persist=.ablaze
   - --persist=.floorp
   - --env=DICPATH=/usr/share/hunspell
   - --filesystem=home/.local/share/applications:create
@@ -49,82 +51,6 @@ cleanup:
   - '*.la'
   - '*.a'
 modules:
-  - shared-modules/dbus-glib/dbus-glib.json
-  - shared-modules/libcanberra/libcanberra.json
-  - shared-modules/intltool/intltool-0.51.json
-  - name: kerberos
-    subdir: src
-    config-opts:
-      - --localstatedir=/var/lib
-      - --sbindir=${FLATPAK_DEST}/bin
-      - --disable-rpath
-      - --disable-static
-    post-install:
-      - install -Dm644 ../krb5.conf -t ${FLATPAK_DEST}/etc/
-    sources:
-      - type: archive
-        url: https://kerberos.org/dist/krb5/1.21/krb5-1.21.tar.gz
-        sha256: 69f8aaff85484832df67a4bbacd99b9259bd95aab8c651fbbe65cdc9620ea93b
-      - type: file
-        path: krb5.conf
-    cleanup:
-      - /bin
-      - /share/et
-      - /share/examples
-  - name: sound-theme-freedesktop
-    sources:
-      - type: git
-        url: https://salsa.debian.org/gnome-team/sound-theme-freedesktop.git
-        tag: upstream/0.8
-  - name: pcsc-lite
-    config-opts:
-      - --disable-libudev
-      - --disable-libsystemd
-      - --without-systemdsystemunitdir
-      - --disable-serial
-      - --disable-usb
-      - --disable-documentation
-      - --disable-polkit
-    post-install:
-      - rm /app/sbin/pcscd
-      - rmdir /app/sbin || true
-    sources:
-      - type: archive
-        url: https://salsa.debian.org/rousseau/PCSC/-/archive/2.0.3/PCSC-2.0.3.tar.bz2
-        sha256: 35ce63ff9f8fa34b67fbc791be08b3daba621263545e3d0fe1e480301f10a41d
-  - name: dotconf
-    cleanup:
-      - '*'
-    sources:
-      - type: archive
-        url: https://github.com/williamh/dotconf/archive/refs/tags/v1.3.tar.gz
-        sha256: 7f1ecf40de1ad002a065a321582ed34f8c14242309c3547ad59710ae3c805653
-      - type: script
-        commands:
-          - autoreconf -fiv
-        dest-filename: autogen.sh
-  - name: libspeechd
-    config-opts:
-      - --disable-python
-      - --with-systemdsystemunitdir=''
-      - --disable-rpath
-      - --disable-static
-      - --with-kali=no
-      - --with-baratinoo=no
-      - --with-ibmtts=no
-      - --with-voxin=no
-      - --without-oss
-    sources:
-      - type: archive
-        url: https://github.com/brailcom/speechd/releases/download/0.11.5/speech-dispatcher-0.11.5.tar.gz
-        sha256: 1ce4759ffabbaf1aeb433a5ec0739be0676e9bdfbae9444a7b3be1b2af3ec12b
-    cleanup:
-      - /bin
-      - /etc
-      - /libexec
-      - /lib/speech-dispatcher
-      - /share/sounds/speech-dispatcher
-      - /share/speech-dispatcher
   - name: floorp
     buildsystem: simple
     build-commands:
