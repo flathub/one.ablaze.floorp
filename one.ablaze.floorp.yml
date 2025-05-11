@@ -79,7 +79,7 @@ modules:
         only-arches:
           - x86_64
         url: https://github.com/Floorp-Projects/Floorp-12/releases/download/beta/floorp-linux-amd64.tar.xz
-        sha256: 77308e26539b709937fc46a8b5992c82d232da17d973ef23b447e104751383b4
+        sha256: c9eb07ee8453649a227de6e062ab0f49acdceb30ca1f127af72ae91e325df088
 
       - type: file
         path: one.ablaze.floorp.appdata.xml
