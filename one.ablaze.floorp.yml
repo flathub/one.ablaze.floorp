@@ -1,5 +1,4 @@
 app-id: one.ablaze.floorp
-name: Floorp
 runtime: org.freedesktop.Platform
 runtime-version: 24.08
 sdk: org.freedesktop.Sdk
@@ -151,8 +150,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.27.0/floorp-11.27.0.linux-x86_64.tar.bz2
-        sha256: 7bceaf11bf76bde39fa60f5566ff7296fc23a6f83fc5d621ba32f973559369de
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.28.0/floorp-11.28.0.linux-x86_64.tar.bz2
+        sha256: 17d35b6ccf0452cf9986c0b886c993ee1297b4c2df60e54aef0a426d581c7df8
         x-checker-data:
           is-main-source: true
           type: json
@@ -163,8 +162,8 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.27.0/floorp-11.27.0.linux-aarch64.tar.bz2
-        sha256: 851cd74cd8f947073012a5b9de1e0fb0525f6d64452fb5fbb4b11b54ec926e05
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v11.28.0/floorp-11.28.0.linux-aarch64.tar.bz2
+        sha256: 279461fc06c46eb191a88e476cc100471617878fdb1478c8c03e92c2608b2bef
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Floorp-Projects/Floorp/releases/latest

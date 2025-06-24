@@ -56,6 +56,9 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="11.28.0" date="2025-06-23" urgency="high">
+      <url>https://blog.floorp.app/en/release/11.28.0.html</url>
+    </release>
     <release version="11.27.0" date="2025-05-29" urgency="high">
       <url>https://blog.floorp.app/en/release/11.27.0.html</url>
     </release>
