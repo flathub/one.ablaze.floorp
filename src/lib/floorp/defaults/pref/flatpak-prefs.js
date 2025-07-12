@@ -1,4 +1,4 @@
-pref("distribution.about", "Floorp for Flatpak\nContributors: nexryai, typeling1578,\ndominichayesferen");
+pref("distribution.about", "Floorp Flatpak\nContributors: nexryai, typeling1578,\ndominichayesferen");
 pref("distribution.id", "one.ablaze.floorp");
 
 pref("enable.floorp.update", false);
