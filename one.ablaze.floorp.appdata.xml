@@ -59,6 +59,9 @@
     <release version="12.0.17" date="2025-08-16">
       <url>https://blog.floorp.app/en/release/12.0.17.html</url>
     </release>
+    <release version="11.30.0" date="2025-08-18" urgency="high">
+      <url>https://blog.floorp.app/en/release/11.30.0.html</url>
+    </release>
     <release version="11.29.0" date="2025-07-23" urgency="high">
       <url>https://blog.floorp.app/en/release/11.29.0.html</url>
     </release>
