@@ -9,6 +9,9 @@ add-extensions:
     directory: lib/ffmpeg
     version: 24.08
     add-ld-path: .
+  one.ablaze.floorp.systemconfig:
+    directory: etc/floorp
+    no-autodownload: true
 command: floorp
 finish-args:
   - --share=ipc
