@@ -39,19 +39,19 @@
   <screenshots>
     <screenshot type="default">
       <caption>Main window, showing the New Tab page</caption>
-      <image>https://raw.githubusercontent.com/Floorp-Projects/About-Floorp-Projects/main/flathub-screenshot-white1.png</image>
+      <image>https://raw.githubusercontent.com/flathub/one.ablaze.floorp/master/data/screenshot-1.png</image>
     </screenshot>
     <screenshot>
       <caption>Main window, showing the Floorp website</caption>
-      <image>https://raw.githubusercontent.com/Floorp-Projects/About-Floorp-Projects/main/flathub-screenshot-white2.png</image>
+      <image>https://raw.githubusercontent.com/flathub/one.ablaze.floorp/master/data/screenshot-2.png</image>
     </screenshot>
     <screenshot>
       <caption>Main window, with dark theme, showing the first launch page</caption>
-      <image>https://raw.githubusercontent.com/Floorp-Projects/About-Floorp-Projects/main/flathub-screenshot-black1.png</image>
+      <image>https://raw.githubusercontent.com/flathub/one.ablaze.floorp/master/data/screenshot-3.png</image>
     </screenshot>
     <screenshot>
       <caption>Main window, with dark theme, showing the Floorp website</caption>
-      <image>https://raw.githubusercontent.com/Floorp-Projects/About-Floorp-Projects/main/flathub-screenshot-black2.png</image>
+      <image>https://raw.githubusercontent.com/flathub/one.ablaze.floorp/master/data/screenshot-4.png</image>
     </screenshot>
   </screenshots>
   <content_rating type="oars-1.1"/>
