@@ -4,19 +4,19 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MPL-2.0</project_license>
   <name>Floorp</name>
-  <summary>A Firefox-based, flexible browser developed in Japan with a variety of features.</summary>
+  <summary>Customizable Firefox-based browser from Japan</summary>
   <developer_name>Ablaze</developer_name>
   <icon type="stock">one.ablaze.floorp</icon>
   <description>
-    <p>Unlimited customization with Floorp</p>
-    <p>Features</p>
+    <p>Unlimited Customization For Everyone</p>
+    <p>Enable more advanced customization than your default browser. Floorp is based on the smart Firefox, and enhances functionality and flexibility while maintaining security and privacy.</p>
+    <p>What can Floorp do for you?</p>
     <ul>
-      <li>Strong Tracking Protection</li>
-      <li>Flexible Layout</li>
-      <li>Switchable Design</li>
-      <li>Regular Updates</li>
-      <li>No User Tracking</li>
-      <li>Powered by Open Source</li>
+      <li>Flexible UI Customization: Floorp's most distinctive feature is its customizability. Floorp is the first Firefox-based browser to enable UI customization, designed so that anyone can easily adjust their browsing experience to their preferences and access the web with ease.</li>
+      <li>Various Ways to Browse the Web: Floorp features workspaces that integrate tab groups with containers that can separate login information. Additionally, you can easily access social media and chats through web panels.</li>
+      <li>Various Control Methods Supported: Browse more efficiently with mouse gestures and customizable keyboard shortcuts. Of course, it's also designed to be easily operated with a mouse.</li>
+      <li>Development and Research Focused: Floorp actively pursues experimental browser development. It's a browser that continuously incorporates new technologies and ideas, and energetically improves based on community feedback.</li>
+      <li>Aiming for a Sustainable Web: We respect users' rights and contribute to building an open and sustainable web ecosystem. Let's create the future of the internet together for the next generation.</li>
     </ul>
   </description>
   <branding>
