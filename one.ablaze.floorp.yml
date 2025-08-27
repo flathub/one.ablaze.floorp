@@ -14,6 +14,7 @@ add-extensions:
     no-autodownload: true
 command: floorp
 finish-args:
+  - --allow=devel
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
@@ -25,12 +26,7 @@ finish-args:
   - --env=DICPATH=/usr/share/hunspell
   - --filesystem=home/.local/share/applications:create
   - --filesystem=home/.local/share/icons:create
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-videos
+  - --filesystem=xdg-download:rw
   - --filesystem=/run/.heim_org.h5l.kcm-socket
   - --filesystem=xdg-run/speech-dispatcher:ro
   - --device=all
