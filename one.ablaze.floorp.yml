@@ -14,31 +14,9 @@ add-extensions:
     no-autodownload: true
 command: floorp
 finish-args:
-  - --share=ipc
-  - --share=network
-  - --socket=pulseaudio
-  - --socket=wayland
-  - --socket=fallback-x11
-  - --socket=pcsc
-  - --socket=cups
   - --persist=.floorp
-  - --env=DICPATH=/usr/share/hunspell
   - --filesystem=home/.local/share/applications:create
   - --filesystem=home/.local/share/icons:create
-  - --filesystem=xdg-desktop
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-videos
-  - --filesystem=/run/.heim_org.h5l.kcm-socket
-  - --filesystem=xdg-run/speech-dispatcher:ro
-  - --device=all
-  - --talk-name=org.freedesktop.FileManager1
-  - --system-talk-name=org.freedesktop.NetworkManager
-  - --talk-name=org.a11y.Bus
-  - --talk-name=org.gtk.vfs.*
-  - --own-name=org.mpris.MediaPlayer2.firefox.*
   - --own-name=org.mozilla.floorp.*
 cleanup:
   - /include
