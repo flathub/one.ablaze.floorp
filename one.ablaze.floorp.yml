@@ -24,8 +24,8 @@ finish-args:
   - --socket=cups
   - --persist=.floorp
   - --env=DICPATH=/usr/share/hunspell
-  - --filesystem=home/.local/share/applications:create
-  - --filesystem=home/.local/share/icons:create
+  - --filesystem=xdg-data/applications:create
+  - --filesystem=xdg-data/icons:create
   - --filesystem=xdg-download:rw
   - --filesystem=/run/.heim_org.h5l.kcm-socket
   - --filesystem=xdg-run/speech-dispatcher:ro
