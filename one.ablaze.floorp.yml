@@ -24,8 +24,8 @@ finish-args:
   - --socket=cups
   - --persist=.floorp
   - --env=DICPATH=/usr/share/hunspell
-  - --filesystem=home/.local/share/applications:create
-  - --filesystem=home/.local/share/icons:create
+  - --filesystem=xdg-data/applications:create
+  - --filesystem=xdg-data/icons:create
   - --filesystem=xdg-download:rw
   - --filesystem=/run/.heim_org.h5l.kcm-socket
   - --filesystem=xdg-run/speech-dispatcher:ro
@@ -75,8 +75,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.1.3/floorp-linux-amd64.tar.xz
-        sha256: 872b0c4eab5470fc6b4ffeb1f24995f91b5718a0c9be3a6cc856745f3d72798b
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.1.4/floorp-linux-amd64.tar.xz
+        sha256: 86a5d86a52f3778ca3d3b7b250c3e36820ab792232e8dd8cd4482586e9c1f2f1
         x-checker-data:
           is-main-source: true
           type: json
@@ -87,8 +87,8 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.1.3/floorp-linux-aarch64.tar.xz
-        sha256: 359a32a26d204438b45600f441d67b45062b2c5f86ddf470515fef9d01b1d029
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.1.4/floorp-linux-aarch64.tar.xz
+        sha256: 3221bc1299edacf061f0c66a3543532fd67ef0b7f998f4c41b4c7f062f79685b
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Floorp-Projects/Floorp/releases/latest
