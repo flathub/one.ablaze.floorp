@@ -54,6 +54,7 @@ modules:
     build-commands:
       - install -Dm644 one.ablaze.floorp.appdata.xml -t /app/share/metainfo/
       - mkdir -p /app/lib/ffmpeg
+      - mkdir -p /app/etc/floorp
       - mv floorp-linux-*.tar.xz floorp.tar.xz
       - tar -xvf ./floorp.tar.xz -C /app/lib
       - cp -r ./src/* /app/
