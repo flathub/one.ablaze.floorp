@@ -56,6 +56,12 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="12.3.5" date="2025-10-26">
+      <url>https://blog.floorp.app/en/release/12.3.5.html</url>
+    </release>
+    <release version="12.3.4" date="2025-10-25">
+      <url>https://blog.floorp.app/en/release/12.3.4.html</url>
+    </release>
     <release version="12.3.3" date="2025-10-22">
       <url>https://blog.floorp.app/en/release/12.3.3.html</url>
     </release>
