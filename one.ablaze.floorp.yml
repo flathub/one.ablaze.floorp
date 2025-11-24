@@ -24,6 +24,7 @@ finish-args:
   - --socket=cups
   - --persist=.floorp
   - --env=DICPATH=/usr/share/hunspell
+  - "--filesystem=xdg-config/gtk-3.0:ro"
   - --filesystem=xdg-data/applications:create
   - --filesystem=xdg-data/icons:create
   - --filesystem=xdg-download:rw
