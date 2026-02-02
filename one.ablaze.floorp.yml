@@ -103,6 +103,6 @@ modules:
       - type: file
         path: src/flatpak-prefs.js
       - type: file
-        path: src/floorp
+        path: src/floorp.sh
       - type: file
         path: src/policies.json
