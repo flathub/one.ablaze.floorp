@@ -52,10 +52,14 @@ modules:
       - install -Dm644 one.ablaze.floorp.appdata.xml -t /app/share/metainfo/
       - mkdir -p /app/lib/ffmpeg
       - mkdir -p /app/etc/floorp
+      - mkdir -p /app/bin
+      - mkdir -p /app/share/applications
       - mv floorp-linux-*.tar.xz floorp.tar.xz
       - tar -xvf ./floorp.tar.xz -C /app/lib
-      - cp -r ./src/* /app/
-      - chmod +x /app/bin/floorp
+      - install -Dm755 floorp.sh /app/bin/floorp
+      - mv one.ablaze.floorp.desktop /app/share/applications/
+      - install -Dm644 -t /app/lib/floorp/defaults/pref/ flatpak-prefs.js
+      - install -Dm644 -t /app/lib/floorp/distribution/ policies.json
       - >
         for size in 16 32 48 64 128; do
           mkdir -p "/app/share/icons/hicolor/${size}x${size}/apps"
@@ -96,6 +100,11 @@ modules:
 
       - type: file
         path: one.ablaze.floorp.appdata.xml
-      - type: dir
-        path: src
-        dest: src
+      - type: file
+        path: src/flatpak-prefs.js
+      - type: file
+        path: src/floorp.sh
+      - type: file
+        path: src/one.ablaze.floorp.desktop
+      - type: file
+        path: src/policies.json
