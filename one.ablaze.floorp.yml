@@ -56,11 +56,10 @@ modules:
       - mkdir -p /app/share/applications
       - mv floorp-linux-*.tar.xz floorp.tar.xz
       - tar -xvf ./floorp.tar.xz -C /app/lib
-      - mv ./src/floorp /app/bin/floorp
-      - chmod +x /app/bin/floorp
-      - mv ./src/one.ablaze.floorp.desktop /app/share/applications/
-      - mv ./src/flatpak-prefs.js /app/lib/floorp/defaults/pref/
-      - mv ./src/policies.json /app/lib/floorp/distribution/
+      - install -Dm755 floorp.sh /app/bin/floorp
+      - mv one.ablaze.floorp.desktop /app/share/applications/
+      - install -Dm644 -t /app/lib/floorp/defaults/pref/ flatpak-prefs.js
+      - install -Dm644 -t /app/lib/floorp/distribution/ policies.json
       - >
         for size in 16 32 48 64 128; do
           mkdir -p "/app/share/icons/hicolor/${size}x${size}/apps"
