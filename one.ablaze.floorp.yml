@@ -105,6 +105,6 @@ modules:
       - type: file
         path: src/floorp.sh
       - type: file
-        path: one.ablaze.floorp.desktop
+        path: src/one.ablaze.floorp.desktop
       - type: file
         path: src/policies.json
