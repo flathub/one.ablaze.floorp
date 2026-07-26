@@ -59,7 +59,7 @@
   <content_rating type="oars-1.1"/>
   <releases>
     <release version="12.16.4" date="2026-07-25">
-      <description></description>
+      <url>https://blog.floorp.app/en/release/12.16.4.html</url>
     </release>
     <release version="12.16.3" date="2026-07-22">
       <url>https://blog.floorp.app/en/release/12.16.3.html</url>
