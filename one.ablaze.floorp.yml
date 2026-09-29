@@ -102,7 +102,7 @@ modules:
         path: one.ablaze.floorp.appdata.xml
       - type: file
         path: src/flatpak-prefs.js
-      - type: fil
+      - type: file
         path: src/floorp.sh
       - type: file
         path: src/one.ablaze.floorp.desktop
