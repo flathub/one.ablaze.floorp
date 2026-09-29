@@ -1,9 +1,9 @@
 app-id: one.ablaze.floorp
 runtime: org.freedesktop.Platform
-runtime-version: 25.08
+runtime-version: 26.08
 sdk: org.freedesktop.Sdk
 base: org.mozilla.firefox.BaseApp
-base-version: '25.08'
+base-version: '26.08'
 add-extensions:
   one.ablaze.floorp.systemconfig:
     directory: etc/floorp
@@ -77,8 +77,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.18.1/floorp-linux-x86_64.tar.xz
-        sha256: 2891d016b03cee91e030231d709d572b63980780612e4ccaae8e7dca76d86edd
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.19.0/floorp-linux-x86_64.tar.xz
+        sha256: 010c7ae3bc7fb0d49f7f0584682abe62df7a8e7dceeff5152c6aa5fe52926081
         x-checker-data:
           is-main-source: true
           type: json
@@ -89,8 +89,8 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.18.1/floorp-linux-aarch64.tar.xz
-        sha256: 80c5cf950098c14277e2a4c36bcfd7e583c17d217ef04891ba3086cc3f2ddd29
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.19.0/floorp-linux-aarch64.tar.xz
+        sha256: 60a00a5c9cffcbcad373b5fa0f262fadee45fb8e4151bc7a5505bfc0c1d8a03f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Floorp-Projects/Floorp/releases/latest
@@ -102,7 +102,7 @@ modules:
         path: one.ablaze.floorp.appdata.xml
       - type: file
         path: src/flatpak-prefs.js
-      - type: file
+      - type: fil
         path: src/floorp.sh
       - type: file
         path: src/one.ablaze.floorp.desktop
