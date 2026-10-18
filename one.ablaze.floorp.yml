@@ -77,8 +77,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.20.1/floorp-linux-x86_64.tar.xz
-        sha256: 9edbf80d4ced1f29b1910048d75b8f23f3905576e11b859f22b38001042060b0
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.20.2/floorp-linux-x86_64.tar.xz
+        sha256: 059a85f0e40c9f3649ae61fe716ecbdde85f06971a600aeec5c3e8f3a0af6004
         x-checker-data:
           is-main-source: true
           type: json
@@ -89,8 +89,8 @@ modules:
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.20.1/floorp-linux-aarch64.tar.xz
-        sha256: 22e15319f316b9a087f97234200847e401bd255b16c1b536ada6210a7315c56b
+        url: https://github.com/Floorp-Projects/Floorp/releases/download/v12.20.2/floorp-linux-aarch64.tar.xz
+        sha256: 3521183a928c7e2a43577e1cccb9fc70c71c90ed7538221e1f4435e051d00d22
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Floorp-Projects/Floorp/releases/latest
