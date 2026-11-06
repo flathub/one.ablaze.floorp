@@ -33,6 +33,9 @@ If distinct legacy and XDG profile registries both exist, if a separate host
 the launcher reports an error on standard error and leaves the data untouched.
 An alias of the selected legacy or XDG directory is accepted; sharing only a
 registry file between different directories is still ambiguous.
+Without home permission, Flatpak's `--persist=.floorp` bind mount is recognized
+as the legacy app-data directory, so an existing XDG registry remains usable.
+An ordinary host symlink to an unselected legacy directory is not this mount.
 Run `flatpak run one.ablaze.floorp` in a terminal to see the paths in the error.
 Back up both profile directories before resolving the ambiguity. A host profile
 cannot be accessed after its home-directory permission has been removed.

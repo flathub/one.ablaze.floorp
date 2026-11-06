@@ -34,8 +34,15 @@ floorp_select_profile_root() {
     selected="$xdg"
   fi
   if [[ -e "$host" && ! "$host" -ef "$selected" ]]; then
-    printf '%s\n' "Floorp: a separate host profile directory exists at $host. No data was changed; resolve the profile choice before starting." >&2
-    return 1
+    # Without home access, --persist=.floorp bind-mounts the legacy app-data
+    # directory here even when the existing registry is in XDG_CONFIG_HOME.
+    # That mount is not a separate host profile. An ordinary host symlink to
+    # the unselected legacy directory must still fail the ambiguity check.
+    if [[ -L "$host" || ! "$host" -ef "$legacy" ]] ||
+       ! mountpoint -q -- "$host"; then
+      printf '%s\n' "Floorp: a separate host profile directory exists at $host. No data was changed; resolve the profile choice before starting." >&2
+      return 1
+    fi
   fi
   export MOZ_APP_DATA="$selected"
 }

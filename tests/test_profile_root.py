@@ -86,6 +86,48 @@ class ProfileRootTest(unittest.TestCase):
         self.assertIn("separate host profile", result.stderr)
         self.assertFalse((self.legacy / "profiles.ini").exists())
 
+    def mock_mountpoint(self, status):
+        # Model mount metadata separately from directory identity. The full
+        # Flatpak test also exercises the real --persist bind mount.
+        bindir = Path(self.temp.name) / "bin"
+        bindir.mkdir()
+        command = bindir / "mountpoint"
+        command.write_text(f"#!/bin/sh\nexit {status}\n")
+        command.chmod(0o755)
+        return str(bindir) + os.pathsep + os.environ.get("PATH", "")
+
+    def test_persisted_legacy_mount_allows_selected_xdg_registry(self):
+        self.registry(self.xdg)
+        host = self.home / ".floorp"
+        host.mkdir()
+        self.legacy.symlink_to(host, target_is_directory=True)
+        result = self.select(PATH=self.mock_mountpoint(0))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(Path(result.stdout).resolve(), self.xdg)
+
+    def test_legacy_identity_without_mountpoint_is_still_rejected(self):
+        self.registry(self.xdg)
+        host = self.home / ".floorp"
+        host.mkdir()
+        self.legacy.symlink_to(host, target_is_directory=True)
+        result = self.select(PATH=self.mock_mountpoint(32))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("separate host profile", result.stderr)
+
+    def test_host_symlink_is_not_a_persist_mount_even_if_target_is_mounted(self):
+        self.registry(self.xdg)
+        self.legacy.mkdir()
+        (self.home / ".floorp").symlink_to(self.legacy, target_is_directory=True)
+        result = self.select(PATH=self.mock_mountpoint(0))
+        self.assertNotEqual(result.returncode, 0)
+
+    def test_mountpoint_alone_does_not_allow_a_separate_host_directory(self):
+        self.registry(self.xdg)
+        self.legacy.mkdir()
+        (self.home / ".floorp").mkdir()
+        result = self.select(PATH=self.mock_mountpoint(0))
+        self.assertNotEqual(result.returncode, 0)
+
     def test_both_existing_registries_fail_closed(self):
         self.registry(self.legacy)
         self.registry(self.xdg)
