@@ -28,6 +28,8 @@ if candidate:
     shutil.copyfile(candidate, appdata / "config/codex-kan8-helper.sh")
 
 def launch(label, expose_home):
+    # Request a deterministic local page in this fresh-profile fixture. The
+    # blank tab is not a session-restore check or a way to disable restoration.
     args = ["dbus-run-session", "--", "xvfb-run", "-a", "timeout", "--kill-after=5s", "15s",
             "flatpak", "run", "--user", "--no-session-bus", "--no-a11y-bus"]
     if expose_home:

@@ -17,11 +17,6 @@ floorp_select_profile_root() {
     printf '%s\n' "Floorp: two Flatpak profile registries exist: $legacy and $xdg. No data was changed; choose which profile to retain before starting." >&2
     return 1
   fi
-  if [[ -e "$host" && ! "$host" -ef "$legacy" ]]; then
-    printf '%s\n' "Floorp: a separate host profile directory exists at $host. No data was changed; resolve the profile choice before starting." >&2
-    return 1
-  fi
-
   local dir entry
   for dir in "$legacy" "$xdg"; do
     if [[ -d "$dir" && ! -e "$dir/profiles.ini" ]]; then
@@ -34,9 +29,13 @@ floorp_select_profile_root() {
     fi
   done
 
+  local selected="$legacy"
   if [[ -e "$xdg/profiles.ini" && ! -e "$legacy/profiles.ini" ]]; then
-    export MOZ_APP_DATA="$xdg"
-  else
-    export MOZ_APP_DATA="$legacy"
+    selected="$xdg"
   fi
+  if [[ -e "$host" && ! "$host" -ef "$selected" ]]; then
+    printf '%s\n' "Floorp: a separate host profile directory exists at $host. No data was changed; resolve the profile choice before starting." >&2
+    return 1
+  fi
+  export MOZ_APP_DATA="$selected"
 }

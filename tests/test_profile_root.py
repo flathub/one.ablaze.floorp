@@ -46,6 +46,46 @@ class ProfileRootTest(unittest.TestCase):
         self.registry(self.xdg)
         self.assertEqual(Path(self.select().stdout).resolve(), self.xdg)
 
+    def test_host_alias_of_xdg_registry_is_not_a_separate_profile(self):
+        self.registry(self.xdg)
+        host = self.home / ".floorp"
+        host.symlink_to(self.xdg, target_is_directory=True)
+        before = (self.xdg / "profiles.ini").read_bytes()
+        result = self.select()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(Path(result.stdout).resolve(), self.xdg)
+        self.assertEqual((self.xdg / "profiles.ini").read_bytes(), before)
+        self.assertEqual(host.resolve(), self.xdg)
+        self.assertFalse(self.legacy.exists())
+
+    def test_host_alias_does_not_hide_conflicting_registries(self):
+        self.registry(self.legacy)
+        self.registry(self.xdg)
+        (self.home / ".floorp").symlink_to(self.xdg, target_is_directory=True)
+        before = [(p / "profiles.ini").read_bytes() for p in (self.legacy, self.xdg)]
+        result = self.select()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("two Flatpak profile registries", result.stderr)
+        self.assertEqual([(p / "profiles.ini").read_bytes() for p in (self.legacy, self.xdg)], before)
+
+    def test_host_registry_file_alias_in_other_directory_is_rejected(self):
+        self.registry(self.xdg)
+        host = self.home / ".floorp"
+        host.mkdir()
+        (host / "profiles.ini").hardlink_to(self.xdg / "profiles.ini")
+        result = self.select()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("separate host profile", result.stderr)
+
+    def test_host_alias_of_empty_legacy_does_not_override_xdg_registry(self):
+        self.registry(self.xdg)
+        self.legacy.mkdir()
+        (self.home / ".floorp").symlink_to(self.legacy, target_is_directory=True)
+        result = self.select()
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("separate host profile", result.stderr)
+        self.assertFalse((self.legacy / "profiles.ini").exists())
+
     def test_both_existing_registries_fail_closed(self):
         self.registry(self.legacy)
         self.registry(self.xdg)
