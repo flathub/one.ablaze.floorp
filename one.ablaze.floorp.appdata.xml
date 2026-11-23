@@ -58,6 +58,10 @@
   </screenshots>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="12.21.2" date="2026-11-13">
+      <url type="details">https://github.com/Floorp-Projects/Floorp/releases/tag/v12.21.2</url>
+      <description></description>
+    </release>
     <release version="12.21.1" date="2026-11-05">
       <url>https://blog.floorp.app/en/release/12.21.1/</url>
     </release>
