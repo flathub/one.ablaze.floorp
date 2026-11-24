@@ -57,6 +57,7 @@ modules:
       - mv floorp-linux-*.tar.xz floorp.tar.xz
       - tar -xvf ./floorp.tar.xz -C /app/lib
       - install -Dm755 floorp.sh /app/bin/floorp
+      - install -Dm644 floorp-profile-root.sh /app/bin/floorp-profile-root.sh
       - mv one.ablaze.floorp.desktop /app/share/applications/
       - install -Dm644 -t /app/lib/floorp/defaults/pref/ flatpak-prefs.js
       - install -Dm644 -t /app/lib/floorp/distribution/ policies.json
@@ -104,6 +105,8 @@ modules:
         path: src/flatpak-prefs.js
       - type: file
         path: src/floorp.sh
+      - type: file
+        path: src/floorp-profile-root.sh
       - type: file
         path: src/one.ablaze.floorp.desktop
       - type: file
